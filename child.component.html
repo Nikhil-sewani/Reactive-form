@@ -1,0 +1,28 @@
+<div>
+    <h1>
+        Different Ways Of data Transfer
+    </h1>
+
+</div>
+<h1>Name Is: {{XYZ}} <br> and the Mark is :{{XYW}}</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Mark
+            </th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let items of dataarray">
+   <td>{{items.name}}</td>
+   <td>{{items.mark}}</td>
+    </tbody>
+</table>
+<br><br>
+<input #titlename type="text">
+<br>
+<button (click)="dataUpdateevent.emit(titlename.value)">CHANGE IT!</button>
