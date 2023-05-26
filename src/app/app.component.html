@@ -1,0 +1,14 @@
+<h1>{{title}}</h1>
+<br><br>
+
+<div>
+  Name:
+<input #name type="text" placeholder="Name">
+<br><br>
+Mark:
+<input #mark type="text" placeholder="Mark">
+</div>
+
+<button (click)="TransferData(name.value,mark.value)">Submit</button>
+
+<app-child [XYZ]="inputname" [XYW]="inputmark" (dataUpdateevent)="updateTitle($event)"></app-child>
