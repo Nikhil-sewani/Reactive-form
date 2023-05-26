@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'Reactiveform'`, () => {
+  it(`should have as title 'data_Transfer'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('Reactiveform');
+    expect(app.title).toEqual('data_Transfer');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('Reactiveform app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('data_Transfer app is running!');
   });
 });

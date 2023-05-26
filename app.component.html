@@ -1,10 +1,14 @@
-<h1>Page works</h1>
-<ul>
-  <li>
-    <a routerLink="basic/login">Login</a>
-  </li>
-  <li>
-    <a routerLink="basic/register">register</a>
-  </li>
-</ul>
-<router-outlet></router-outlet>
+<h1>{{title}}</h1>
+<br><br>
+
+<div>
+  Name:
+<input #name type="text" placeholder="Name">
+<br><br>
+Mark:
+<input #mark type="text" placeholder="Mark">
+</div>
+
+<button (click)="TransferData(name.value,mark.value)">Submit</button>
+
+<app-child [XYZ]="inputname" [XYW]="inputmark" (dataUpdateevent)="updateTitle($event)"></app-child>
